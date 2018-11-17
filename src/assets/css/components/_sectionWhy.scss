@@ -1,0 +1,52 @@
+.backgroundWhy{
+  background-image: url('assets/img/backgrounds/backgroundPic02.png');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+.section-why{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+
+  // border: 1px solid blue;
+  padding: 5rem 0rem 0rem 0rem;
+}
+.section-why-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  // border: 1px solid blue;
+  height: 100%;
+}
+.section-why-text-item{
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+  height: 30%;
+  // border: 1px solid blue;
+}
+.why-text-item-h1{
+  font-weight: 200;
+}
+.why-text-item-p{
+  margin-top: 20px;
+  font-size: 12px;
+}
+.hr-horizontal-sec-why{
+  width: 40px;
+  height: .5px;
+  background-color: black;
+}
+.hr-vertical-sec-why{
+  width: 1px;
+  height: 20px;
+  background-color: black;
+  margin: 0;
+}

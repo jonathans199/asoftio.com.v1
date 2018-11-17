@@ -17,22 +17,16 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-import config from '@/config/settings'
+// import config from '@/config/settings'
 
 Vue.use(BootstrapVue)
 Vue.use(Toasted)
 
 export default {
-  created(){
-    this.setCart()
-  },
+ 
 
   methods:{
-    setCart(){
-      if (config.getLocalCart() === null) {
-        config.createLocalCart()
-      }
-    }
+    
   }
 }
 

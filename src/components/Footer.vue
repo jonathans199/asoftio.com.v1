@@ -1,43 +1,62 @@
 <template>
-  <footer class="footer__container">
-    <div class="container">
-      <div class="row">
-        <div class="col-2 d-flex justify-content-center align-items-center">
-          <img class="footer-logo" src="@/assets/img/yourlogo.png" alt="">
-        </div>
-        <div class="col-8">
-          <ul>
-            <li>ABOUT</li>
-            <li>SHOP</li>
-            <li>COLLECTIONS</li>
-          </ul>
-        </div>
-        <div class="col-2 d-flex justify-content-center align-items-center">
-          <span class="mr-4"><i class="fa fa-facebook-square" /></span>
-          <span class="mr-4"><i class="fa fa-instagram" /></span>
-          <span><i class="fa fa-twitter-square" /></span>
-        </div>
-      </div>
+  <footer class="section-footer backgroundFooter">
+    <div class="overlay-footer"></div>
+    <div @click="goToByScroll('hero-home')" class="section-footer-logo">
+      <img class="footer-logo" :src="logoFoote">
+      <!-- <div class="section-footer-logo-text">
+        <p class="footer-logo-text-top">ASOFT<span>.IO</span></p>
+        <span class="footer-logo-text-bottom">software</span>
+      </div> -->
     </div>
+    <div class="section-footer-menu">
+      <ul class="section-footer-menu-items">
+        <li  class="footer-menu-item" v-for="menuItem in menuItemsEn" :key="menuItem.id" @click="goToByScroll(menuItem.aTag)"><a class="menu-item-link" >{{menuItem.item}}</a></li>
+      </ul>
+    </div>
+    <div @click="goToByScroll('hero-home')" id="to-top-btn">
+        <img class="to-top-img" src="@/assets/img/asoftioLogo.png">
+        <button  id="myBtn" title="Go to top">Top</button>
+      </div>
   </footer>
 </template>
 
-<style>
-  .footer__container span{
-    font-size: 2.5rem;
-  }
+// var sound = new Audio("http://www.orangefreesounds.com/wp-content/uploads/2017/05/Simply-noise-rain.mp3");
+// 		sound.loop = true;
+//         sound.play();
 
-  .footer__container{
-    background-color: #E2E2E2;
-    color: #000;
-  }
-
-  .footer__container ul {
-    font-size: 15px;
-  }
-
-  .footer__container ul li {
-    margin-right: 0px;
-    margin-left: 40px;
-  }
-</style>
+<script>
+import $ from 'jquery'
+import logoFooter from '@/assets/img/icons/logoFooterAsof.png'
+export default {
+//i18n implementation
+  data(){
+    return{
+      logoFoote: logoFooter,
+      menuItemsEn:[
+        {item:"ABOUT US",aTag:"section-team"},
+        {item:"SERVICES",aTag:"section-as"},
+        {item:"PORTFOLIO",aTag:"section-as"},
+        {item:"TESTIMONIALS",aTag:"section-testimonials"},
+        {item:"BLOG",aTag:"section-as"},
+        {item:"CHAT",aTag:"section-as"},
+        {item:"CONTACT US",aTag:"section-contact"}],
+    }
+  },
+   methods: {
+      goToByScroll(id) {
+        console.log(id)
+        $('html,body').animate(
+            { scrollTop: $('#' + id).offset().top },
+            'slow'
+        )
+      },
+     scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById('to-top-btn').style.display = 'block';
+      } else {
+          document.getElementById('to-top-btn').style.display = 'none';
+      }
+    }
+}
+}
+</script>

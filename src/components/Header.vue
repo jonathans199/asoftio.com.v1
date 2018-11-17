@@ -1,187 +1,87 @@
 <template>
   <div>
-    <nav class="navbar__custom">
-      <div id="myNav" class="overlay">
-          <a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a>
-        <div class="overlay-content">
-          <router-link to="/about">About</router-link>
-          <router-link to="/">Contact</router-link>
+    <header>
+      <div class="header-nav">
+        <div class="header-nav-wrap">
+          <div class="header-nav-logo">
+            <img src="@/assets/img/asoftioLogo.png" alt="" class="header-nav-logo-img">
+            <div class="header-nav-logo-text">
+              <!-- <h3 class="header-nav-logo-text-h1">ASOFT<span class="header-nav-logo-text-span">.IO</span></h3> -->
+              <!-- <ul class="header-nav-logo-text-ul">
+                <li class="logo-text-ul-item item-A black-item">A</li>
+                <li class="logo-text-ul-item item-S black-item">S</li>
+                <li class="logo-text-ul-item item-O black-item">O</li>
+                <li class="logo-text-ul-item item-F black-item">F</li>
+                <li class="logo-text-ul-item item-T black-item">T</li>
+                <li class="logo-text-ul-item item-. red-item">.</li>
+                <li class="logo-text-ul-item item-I red-item">I</li>
+                <li class="logo-text-ul-item item-o red-item">O</li>
+              </ul>
+              <span class="logo-text-ul-item-span">software</span> -->
+              <img src="@/assets/img/icons/logoAsoftPartTwo.png" alt="" class="logo-text-ul-item">
+            </div>
+          </div> 
+          <div class="header-nav-menu">
+            <div class="header-nav-menu-burger" @click="openNav">
+              <div class="menu-burger-items" >
+                <span class="burger-item-line"></span>
+                <span class="burger-item-line"></span>
+                <span class="burger-item-line"></span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <button 
-        class="navbar-toggler" 
-        type="button" 
-        data-toggle="collapse" 
-        data-target="#navbarSupportedContent" 
-        aria-controls="navbarSupportedContent" 
-        aria-expanded="false" 
-        aria-label="Toggle navigation">
-        
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="menu">
-          <a class="navbar-brand" href="/"><img class="header__logo" alt="Vue logo" src="@/assets/img/yourlogo.png"></a>
-          <div>
-          <a class="menu__button" @click="openNav()"> MENU <img src="../assets/img/menu-button.svg" alt=""></a>
-          <b-dropdown variant="link" no-caret class="navbar__cart">
-            <template slot="button-content">
-              <i class="fa fa-shopping-cart" style="color:black"></i>
-              <b-badge pill variant="danger">{{count}}</b-badge>
-            </template>
-
-            <ul class="navbar__cart-container">
-              <li class="navbar__cart-item"  v-for="item in items">
-                <img :src="item.images[0].thumb" class="img-fluid img-thumbnail navbar__custom-item-img">
-                <span class="ml-3">
-                  <div>{{item.name}}</div>
-                  <div><small>{{item.qty}} x ${{item.price}} USD</small></div>
-                </span>
-                <span class="navbar__cart-close">
-                  <a href="javascript:void(0)">
-                    <i class="fa fa-times"></i>
-                  </a>
-                </span>
-                <!-- <b-dropdown-divider></b-dropdown-divider> -->
-              </li>
-            </ul>
-            <button class="navbar__cart-button">CHECKOUT</button>
-          </b-dropdown>
-          </div>
-      </div>
-    </nav>
-  </div>
+    </header>
+    <div id="mySidenav" class="sidenav">
+      <!-- <a href="javascript:void(0)" class="closebtn" @click="closeNav">X</a> -->
+      <!-- <a href="#" v-for="menuItem in menuItemsEn" :key="menuItem.id" @click="goToByScroll(menuItem.aTag)">{{menuItem.item}}</a> -->
+       <ul class="section-header-menu-items">
+         <li  class="footer-menu-item" ><a href="javascript:void(0)" class="closebtn menu-item-link" @click="closeNav">X</a></li>
+        <li  class="footer-menu-item" v-for="menuItem in menuItemsEn" :key="menuItem.id" @click="goToByScroll(menuItem.aTag); closeNav()"><a class="menu-item-link" >{{menuItem.item}}</a></li>
+      </ul>
+    </div>
+   </div>
 </template>
 
 <script>
-import axios from 'axios'
-import config from '@/config/settings'
-import { serverBus } from '@/main'
-
-export default {
-  name:'menu2',
-
-  data(){
+import $ from 'jquery'
+  export default {
+    data(){
     return{
-      count: 0,
-      items:[]
+     menuItemsEn:[
+        {item:"ABOUT US",aTag:"section-team"},
+        {item:"SERVICES",aTag:"section-as"},
+        {item:"PORTFOLIO",aTag:"section-as"},
+        {item:"TESTIMONIALS",aTag:"section-testimonials"},
+        {item:"BLOG",aTag:"section-as"},
+        {item:"CHAT",aTag:"section-as"},
+        {item:"CONTACT US",aTag:"section-contact"}],
+
     }
   },
+    methods:{
+      openNav() {
+        // console.log('ddd')
+        // alert('infewefwefw');
+        document.getElementById("mySidenav").style.width = "300px";
+        var ele = document.getElementsByClassName('menu-burger-items');
+        ele[0].style.opacity = '0';
+      },
 
-  created(){
-    this.updateCart()
-    serverBus.$on('updateHeaderCart', () => {
-      this.updateCart()
-    })
-  },
-
-  methods:{
-    
-    updateCart(){
-      this.items = []
-      let cartProducts = JSON.parse(config.getLocalCart())
-          cartProducts.map((product,index) => {
-            this.fetchProducts(product)
-          })
-    },
-
-    fetchProducts(product){
-      axios
-      .get(config.defaultURL + config.storeUUID + '/client/products/' + product.uuid)
-      .then((response) => {
-        let item = response.data
-        if(item.images.length ==  0) {
-          item['images'] = [{
-            thumb: '/img/default.jpg'
-          }]
-        }
-        this.items.push({
-          name:item.name,
-          qty:product.qty,
-          images:item.images
-        })
-        this.count = this.items.length
-      })
-      .catch(function(error){
-        console.log(error)
-      })
-
-    },
-    
-    openNav() {
-      document.getElementById("myNav").style.height = "100%"
-    },
-
-    closeNav() {
-      document.getElementById("myNav").style.height = "0%"
-    },
-
-    // scroll(id){
-    //   let data = async() => {
-    //     await helper.goToByScroll(id)
-    //     await this.closeNav()
-    //   }
-    //   data()
-    // }
+      closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      var ele = document.getElementsByClassName('menu-burger-items');
+        ele[0].style.opacity = '1';
+      },
+      goToByScroll(id) {
+        console.log(id)
+        $('html,body').animate(
+            { scrollTop: $('#' + id).offset().top },
+            'slow'
+        )
+      }
+    }
   }
-}
 </script>
 
-<style>
-
-	.overlay {
-    height: 0%;
-    width: 100%;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-
-	.overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-}
-
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-}
-
-  .menu {
-    display: flex;
-    justify-content: space-between;
-}
-
- .menu__button {
-    padding-left: 2rem;
-}
-
-  .menu__button img {
-    width: 1.5rem;
-    margin: 0 !important;
-}
-</style>
