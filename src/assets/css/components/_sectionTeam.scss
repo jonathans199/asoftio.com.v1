@@ -34,6 +34,7 @@
   border-radius: 0;
   position: relative;
   z-index: 20;
+  margin: 0;
 }
 .card-body{
   position: absolute;
@@ -75,31 +76,29 @@
   opacity: 0;
   transition: ease-in-out 1s;
 }
-@media (max-width: 1200px){
-  .container {
-      max-width: 900px;
-  }
+.col-section-team-size{
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px; 
+  padding-left: 15px;
+  display: flex;
+  flex: 0 0 33.33333%;
+  max-width: 33.3333%;
 }
-// @media (max-width: 928px){
+
+
+// @media (max-width: 800px){
 //   .container {
 //       max-width: 900px;
 //   }
 // }
-@media (max-width: 800px){
-  .container {
-      max-width: 800px;
-  }
-}
-@media (max-width: 768px){
-  .container {
-      max-width: 400px;
-  }
-}
-@media (max-width: 576px){
-  .container {
-      max-width: 400px;
-  }
-}
+// @media (min-width: 768px){
+//   .container {
+//       max-width: 950px;
+//   }
+// }
+
 
 .border-blue{
   border: 1px solid blue;
