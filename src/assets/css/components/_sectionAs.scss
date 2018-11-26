@@ -2,22 +2,13 @@
   // position: relative;
 }
 .backgroundTopAs{
-  // background-image: url('assets/img/backgrounds/topSectionAs.png');
-  // background-position: top; 
-  // background-repeat: no-repeat; 
-  // background-size: cover;
   background: linear-gradient(to left, rgba(0,0,0,.4) 0%, rgba(255,255,255,1)50%);
+  height: 74vh;
 }
 .section-as-top{
-padding: 2rem;
-position: relative;
-// background: linear-gradient(to bottom right, #ffffff 50%,rgba(0,0,0,.4) 10%);
-// background: linear-gradient(175deg, rgba(255,255,255,.7) 50%, rgba(0,0,0,.7) 50%);
+  padding: 2rem;
+  position: relative;
   clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-  // background-image: url('assets/img/backgrounds/topSectionAs.png');
-  // background-position: center; 
-  // background-repeat: no-repeat; 
-  // background-size: cover;
   background-color: rgba(0,0,0,.6)
 }
 .opacity-0{
@@ -31,7 +22,7 @@ position: relative;
   z-index: 40;
   width: 100%;
   height: 100%;
-  // padding-bottom: 10px;
+
 }
 .overlay-as{
   position: absolute;
@@ -41,21 +32,27 @@ position: relative;
   z-index: 30;
   width: 100%;
   height: 100%;
-  // padding-bottom: 10px;
 }
 .section-as-bottom{
+  height: 100vh;
+
+  -webkit-clip-path: polygon(0 25%, 100% 8%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 25%, 100% 8%, 100% 100%, 0% 100%);
+
+
   background-image: url('assets/img/backgrounds/backgroundPic01.png');
   // background-color: #cccccc; /* Used if the image is unavailable */
   //  height: 500px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
-  // border: 1px solid blue;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 12rem 0rem 12rem 5rem;
   position: relative;
+  top: -16rem;
+
 }
 strong{
   color: #EC1C24;
@@ -65,7 +62,10 @@ strong{
 }
 .section-as-bottom-title{
   color:#ffffff;
-  width: 60%;
+  width: 40%;
   text-align: left;
   z-index: 40;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 20%;
 }

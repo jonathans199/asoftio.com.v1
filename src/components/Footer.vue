@@ -26,7 +26,7 @@
 
 <script>
 import $ from 'jquery'
-import logoFooter from '@/assets/img/icons/logoFooterAsof.png'
+import logoFooter from '@/assets/img/icons/asoftio_logo_footer.png'
 export default {
 //i18n implementation
   data(){

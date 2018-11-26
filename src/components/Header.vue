@@ -6,18 +6,6 @@
           <div class="header-nav-logo">
             <img src="@/assets/img/asoftioLogo.png" alt="" class="header-nav-logo-img">
             <div class="header-nav-logo-text">
-              <!-- <h3 class="header-nav-logo-text-h1">ASOFT<span class="header-nav-logo-text-span">.IO</span></h3> -->
-              <!-- <ul class="header-nav-logo-text-ul">
-                <li class="logo-text-ul-item item-A black-item">A</li>
-                <li class="logo-text-ul-item item-S black-item">S</li>
-                <li class="logo-text-ul-item item-O black-item">O</li>
-                <li class="logo-text-ul-item item-F black-item">F</li>
-                <li class="logo-text-ul-item item-T black-item">T</li>
-                <li class="logo-text-ul-item item-. red-item">.</li>
-                <li class="logo-text-ul-item item-I red-item">I</li>
-                <li class="logo-text-ul-item item-o red-item">O</li>
-              </ul>
-              <span class="logo-text-ul-item-span">software</span> -->
               <img src="@/assets/img/icons/logoAsoftPartTwo.png" alt="" class="logo-text-ul-item">
             </div>
           </div> 
@@ -50,14 +38,13 @@ import $ from 'jquery'
     data(){
     return{
      menuItemsEn:[
-        {item:"ABOUT US",aTag:"section-team"},
+        {item:"ABOUT",aTag:"section-team"},
         {item:"SERVICES",aTag:"section-as"},
         {item:"PORTFOLIO",aTag:"section-as"},
         {item:"TESTIMONIALS",aTag:"section-testimonials"},
         {item:"BLOG",aTag:"section-as"},
         {item:"CHAT",aTag:"section-as"},
-        {item:"CONTACT US",aTag:"section-contact"}],
-
+        {item:"CONTACT",aTag:"section-contact"}],
     }
   },
     methods:{

@@ -1,26 +1,24 @@
-// .carousel-indicators li{
-//   border-radius: 100%;
-//   height: 100px;
-//   background-color: transparent;
-//   content: "ivan";
-//   color: blue;
-//   font-size: 20px;
-// }
-
 .d-block-hero{
 	// background: no-repeat 50% scroll;
 	object-fit:  cover;
 	height: 100vh;
-	min-height: 300px;
+  min-height: 300px;
 }
+.carousel-item {
+  height: 100vh;
+  background-size: cover;
+}
+
 .carousel-indicators{
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin-left: 25%;
-  margin-right: 25%;
-  // width: 100%;
-}
+  bottom: 10%;
+  -webkit-transform: rotate(-7deg);
+  -moz-transform: rotate(-7deg);
+  -ms-transform: rotate(-7deg);
+  }
+
 .carousel-indicators li{
   text-indent:0;
   width: 100%;
@@ -44,11 +42,17 @@
 .carousel-indicators .active .carousel-indicator-span{
   color: #000000;
 }
+.hero-home {
+  height: 100vh;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 86%, 0% 100%);
+}
+
 
 .hero-home-ul{
   position: absolute;
-  top: 150px;
-  left: 100px;
+  top: 30%;
+  left: 0%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
