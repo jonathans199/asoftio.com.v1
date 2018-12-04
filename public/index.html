@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>faviconAio.png">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <title>Asoftio Not Just Code</title>
+    <title>Asoftio</title>
   </head>
   <body>
     <noscript>
@@ -20,7 +20,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -30,9 +30,102 @@
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
     })();
-  </script>
+  </script> -->
   <!--End of Tawk.to Script-->
   <script>
+    window.onload = function() {
+      // displayNumbers();
+    //  typeWriter('SOFTWARE DEVELOPMENT','.test-h1');
+    //  addAnimation(namesArray);
+    // StartTextAnimation(0);
+    }
+    var dataText =['SOFTWARE DEVELOPMENT','CRYPTOCURRENCY','ERP SYSTEMS','MOVIL-APPS','MLM-PLATAFORMS'];
+    document.addEventListener('DOMContentLoaded',function(event){
+  // array with texts to type in typewriter
+  // var dataText = [ "Amsterdam.", "Full Service.", "Webdevelopment.", "Wij zijn Occhio!"];
+  
+  // type one text in the typwriter
+  // keeps calling itself until the text is finished
+  function typeWriter(text, i, fnCallback) {
+    // chekc if text isn't finished yet
+    if (i < (text.length)) {
+      // add next character to h1
+     document.getElementById("test-h1").innerHTML = text.substring(0, i+1) +'<span id="spanT" aria-hidden="true"></span>';
+
+      // wait for a while and call this function again for next character
+      setTimeout(function() {
+        typeWriter(text, i + 1, fnCallback)
+      }, 200);
+    }
+    // text finished, call callback if there is a callback function
+    else if (typeof fnCallback == 'function') {
+      // call callback after timeout
+      setTimeout(fnCallback, 6000);
+    }
+  }
+  // start a typewriter animation for a text in the dataText array
+   function StartTextAnimation(i) {
+     if (typeof dataText[i] == 'undefined'){
+        setTimeout(function() {
+          StartTextAnimation(0);
+        }, 6000);
+     }
+     // check if dataText[i] exists
+    if (i < dataText[i].length) {
+      // text exists! start typewriter animation
+     typeWriter(dataText[i], 0, function(){
+       // after callback (and whole text has been animated), start next text
+       StartTextAnimation(i + 1);
+     });
+    }
+  }
+  // start the text animation
+  StartTextAnimation(0);
+});
+    var counterArray = ['','h10','h11', 'h12','h13', 'h14'];
+    var temp = 0;
+
+    function displayNumbers(){
+      var i=0;
+      for(var i=0;i<5;i++){
+       
+        setTimeout(function(x) { 
+            return function() { 
+
+                var temp = x+1
+                const elem = document.getElementsByClassName(counterArray[x]);
+                const elemTwo = document.getElementsByClassName(counterArray[temp]);
+
+                if (elem[0].classList.contains('displayOn'))
+                {
+                    elem[0].classList.remove('displayOn');
+                    elem[0].classList.add('displayOff'); 
+                    // if(elemTwo[0].classList.contains('displayOff'))
+                    //     {elemTwo[0].classList.remove('display');}
+                    elemTwo[0].classList.remove('displayOff');
+                    elemTwo[0].classList.add('displayOn')
+                }
+                else if (elem[0].classList.contains('displayOff')){
+                    elem[0].classList.remove('displayOff');
+                    elem[0].classList.add('displayOn'); 
+                    elemTwo[0].classList.remove('displayOn');
+                    elemTwo[0].classList.add('displayOff')
+                }
+                if (temp != 5){
+                    temp++;
+                }else{
+                  temp = 0;
+                }
+            }; 
+           
+        }(i), 5000*i); 
+       
+      }
+    }
+    
+    $('.carousel').carousel({
+      interval: false
+    });
     window.onscroll = function() {scrollFunction()};
 
     function scrollFunction() {

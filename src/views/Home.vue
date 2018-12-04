@@ -1,15 +1,15 @@
 <template>
   <div>
-    <Header/>
+    <!-- <Header/> -->
     <HeroHome/>
-    <SectionAs/>
-    <SectionWhy/>
-    <SectionTeam/>
-    <SectionTestimonials/>
-    <SectionClients/>
-    <SectionContact/>
-    <ModalContact/>
-    <Footer/> 
+    <!-- <SectionAs/> -->
+    <!-- <SectionWhy/> -->
+    <!-- <SectionTeam/> -->
+    <!-- <SectionTestimonials/> -->
+    <!-- <SectionClients/> -->
+    <!-- <SectionContact/> -->
+    <!-- <ModalContact/> -->
+    <!-- <Footer/>  -->
   </div> 
 </template>
 
