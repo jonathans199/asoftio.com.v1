@@ -8,7 +8,7 @@
     <!-- </div> -->
     <div class="section-as-bottom">
       <div class="overlay-as"></div>
-      <h1 class="section-as-bottom-title">{{titleSecAsEn[0]}}<strong>{{titleSecAsEn[1]}}</strong>{{titleSecAsEn[2]}}</h1>
+      <h1 data-aos="fade-up" class="section-as-bottom-title">{{titleSecAsEn[0]}}<strong>{{titleSecAsEn[1]}}</strong>{{titleSecAsEn[2]}}</h1>
     </div>
   </section>
 </template>

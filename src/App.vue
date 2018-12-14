@@ -11,6 +11,7 @@
 </style>
 
 <script>
+
 import Vue from 'vue'
 import Toasted from 'vue-toasted'
 import BootstrapVue from 'bootstrap-vue'

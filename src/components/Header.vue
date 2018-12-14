@@ -4,10 +4,10 @@
       <div class="header-nav">
         <div class="header-nav-wrap">
           <div class="header-nav-logo">
-            <img src="@/assets/img/asoftioLogo.png" alt="" class="header-nav-logo-img">
-            <div class="header-nav-logo-text">
+            <img src="@/assets/img/icons/asoftioHeaderLogo.png" alt="" class="header-nav-logo-img">
+            <!-- <div class="header-nav-logo-text">
               <img src="@/assets/img/icons/logoAsoftPartTwo.png" alt="" class="logo-text-ul-item">
-            </div>
+            </div> -->
           </div> 
           <div class="header-nav-menu">
             <div class="header-nav-menu-burger" @click="openNav">

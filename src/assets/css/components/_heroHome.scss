@@ -44,8 +44,8 @@
   height: 100%;
   width: 100%;
 }
-  .cont > h1{
-    font-size: 60px;
+  .cont > .type-h1{
+    font-size: 6vw;
     text-align: center;
     // width: 70%;
     color: #BE1E2D;
@@ -101,8 +101,8 @@
 .back-icon{
   position: absolute;
   z-index: -1;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
 }
 .wrap-img-text{
   // position: relative;
@@ -112,6 +112,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  padding: 3rem;
 }
 .img-wrap{
   position: relative;
@@ -120,7 +121,7 @@
   justify-content: center;
   align-items: center;
   display: relative;
-  width: 40%;
+  width: 400px;
   height: 100%;
   margin: 0;
 }
@@ -133,10 +134,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
-  height: 50%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  // width: 400px;
+   height: 50%;
+  // padding-top: 20px;
+  // padding-bottom: 20px;
   color: #fff;
   text-align: center;
 }
@@ -219,11 +220,12 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  width: 100%;
-  height: 250px;
+  // width: 90%;
+  height: 100%;
   list-style-type: none;
   // border: 1px solid blue;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
+  padding: 0;
 }
 
 .hero-home-li{
@@ -232,7 +234,8 @@
   text-align: left;
 }
 .hero-home-li:first-child{
-  font-size: 30px;
+  font-size: 20px;
+  font-weight: bolder;
 }
 .carousel-caption{
   position: relative;
@@ -256,3 +259,27 @@
 .border-blue{
   border: 1px solid blue;
 }
+@media (max-width: 800px){
+  .wrap-img-text{
+    flex-direction: column;
+    padding: 0;
+  }
+  .img-wrap{
+    width: 250px;
+    // height: 100%;
+  }
+  .txt-i{
+    // padding-top: 3rem;
+  }
+  .back-icon{
+    width: 350px;
+    height: 350px;
+  }
+  .hero-home{
+    height: 120vh;
+  }
+}
+
+
+
+

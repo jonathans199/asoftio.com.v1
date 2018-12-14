@@ -1,8 +1,6 @@
 <template>
 <div>
   <section class="hero-home" id="hero-home">
-    
-
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <!-- <ol class="carousel-indicators indicators-custom">
         <li v-for="(carouselIndi,index) in carouselIndiEn" :key="carouselIndi.id" data-target="#carouselExampleIndicators" :data-slide-to="index" v-bind:class="{ active: index===0 }"><span class="carousel-indicator-span">&#60;{{carouselIndi.nameIndi}}&#62;</span></li>
@@ -11,15 +9,15 @@
         <div class="carousel-item" v-for="(pics,index) in carouselPics" :key="pics.id" v-bind:class="{ active: index === 0 }">
           <div class="names-h1 cont" v-if="index === 0" >
             <!-- <h1 v-for="(name,index2) in namesH1" :key="name.id" :class="name.className" id='test-h1`'>{{name.n}}</h1> -->
-          <h1 id="test-h1"></h1>
+            <h1 class="type-h1" id="test-h1"></h1>
           </div>
           <div  class="wrap-img-text">
             <div class="img-wrap ">
               <!-- <p class="back-letter ">{{pics.letter}}</p> -->
               <img class="back-icon" :src="pics.letter">
-              <img class="img-item-a" :src="pics.pic" alt="">
+              <img data-aos="fade-up" class="img-item-a" :src="pics.pic" alt="">
             </div>
-            <div class=" txt-i " >
+            <div class="txt-i" >
               <ul class="hero-home-ul" v-bind:class="{}">
                 <li class="hero-home-li" v-for="content  in pics.list" :key="content.id" >{{content}} </li>
                 <button class="section-hero-btn" data-toggle="modal" data-target="#modalContactForm">{{moreInfoBtnEN}}</button>
@@ -30,14 +28,14 @@
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <div class="prev-arrow">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
         </div>
       </a>
       <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
         <div class="prev-arrow">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
         </div>
       </a>
     </div>
@@ -106,7 +104,7 @@ export default {
         {
           pic:Backgroun03,
           list:[
-            "MULTILEVEL MARKETING PLATFORMS", 
+            "MULTILEVEL PLATFORMS", 
             "=> UNILEVEL PLATFORMS",
             "=> BINARY SYSTEMS", 
             "=> CUSTOM MATRIX"],
