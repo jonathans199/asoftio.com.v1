@@ -41,7 +41,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 20%;
+  height: 60px;
   z-index: 30;
   transition: ease-in-out .5s;
   background-color: #212222;
@@ -50,7 +50,7 @@
 }
 .card:hover .card-body{
   height: 100%;
-  background-color: rgba(33,34,34,.6);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .card:hover .card-description{
   opacity: 1;
@@ -62,15 +62,15 @@
   margin: 0;
 }
 .card-text{
-  color: #4e4f50;
-  font-size: 18px;
+  color: #c0c0c0;
+  font-size: 14px;
   text-align: left;
   margin: 0;
   width: 100%;
-  background-color: #212222;
+  // background-color: #212222;
 }
 .card-description{
-  color: #ffffff;
+  color: #c0c0c0;
   font-size: 12px;
   text-align: justify;
   opacity: 0;

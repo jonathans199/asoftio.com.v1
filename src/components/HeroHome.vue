@@ -78,13 +78,13 @@ export default {
           pic: Backgroun01,
           list:[
             "SOFTWARE DEVELOPMENT",
-            "=> CRYPTOCURRANCY APPLICATIONS",
+            "=> CRYPTOCURRENCY APPLICATIONS",
             "=> BLOCKCHAIN TECHNOLOGIES",
-            "=> CUSTOM BOTS & MORE"],
+            "=> CUSTOM BOTS & MORE..."],
             letter: nodeIcon
         },
         {
-          pic:Backgroun02,
+          pic:Backgroun01,
           list: [
             "CUSTOM ERP SYSTEMS", 
             "=> BUSINESS AUTOMATION",
@@ -93,7 +93,7 @@ export default {
             letter: iosIcon
         },
         {
-          pic:Backgroun03,
+          pic:Backgroun02,
           list:[
             "MOBILE NATIVE APPS", 
             "=> ANDROID & IOS",
