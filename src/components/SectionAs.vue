@@ -1,14 +1,7 @@
 <template>
-  <section class="section-as backgroundTopAs" id="section-as">
-    <!-- <div class="overlay-as"></div> -->
-    <!-- <div class="section-as-top "> -->
-      <!-- <div class="overlay-as-top"></div> -->
-      <!-- <img src="@/assets/img/backgrounds/topSectionAs.png" alt=""> -->
-      <!-- <h1 class="opacity-0">placeholder</h1> -->
-    <!-- </div> -->
-    <div class="section-as-bottom">
-      <div class="overlay-as"></div>
-      <h1 data-aos="fade-up" class="section-as-bottom-title">{{titleSecAsEn[0]}}<strong>{{titleSecAsEn[1]}}</strong>{{titleSecAsEn[2]}}</h1>
+  <section class="section-as section-as-background" id="section-as">
+    <div class="section-as-wrap-title">
+      <h1 data-aos="fade-up" class="section-as-title">{{titleSecAsEn[0]}}<strong>{{titleSecAsEn[1]}}</strong>{{titleSecAsEn[2]}}</h1>
     </div>
   </section>
 </template>

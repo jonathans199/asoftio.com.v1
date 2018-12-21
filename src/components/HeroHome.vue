@@ -43,7 +43,7 @@
 </div>
 </template>
 <script>
-import Backgroun01 from '@/assets/img/sliderHero/sH01.png'
+import Backgroun01 from '@/assets/img/sliderHero/icpMacPic.png'
 import Backgroun02 from '@/assets/img/sliderHero/sH02.png'
 import Backgroun03 from '@/assets/img/sliderHero/sH03.png'
 import Backgroun05 from '@/assets/img/sliderHero/slideHero05.jpg'

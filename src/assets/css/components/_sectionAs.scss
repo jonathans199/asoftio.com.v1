@@ -1,58 +1,14 @@
 .section-as{
-  // position: relative;
+ 
 }
-.backgroundTopAs{
-  background: linear-gradient(to left, rgba(0,0,0,.4) 0%, rgba(255,255,255,1)50%);
-  height: 74vh;
-}
-.section-as-top{
-  padding: 2rem;
-  position: relative;
-  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-  background-color: rgba(0,0,0,.6)
-}
-.opacity-0{
-  opacity: 0;
-}
-.overlay-as-top{
-  position: absolute;
-  top:0;
-  left:0;
-  background: linear-gradient(175deg, rgba(255,255,255,1) 50%, rgba(255,255,255,.4) 50%);
-  z-index: 40;
-  width: 100%;
-  height: 100%;
-
-}
-.overlay-as{
-  position: absolute;
-  top:0;
-  left:0;
-  background-color: rgba(0,0,0,.7);
-  z-index: 30;
-  width: 100%;
-  height: 100%;
-}
-.section-as-bottom{
-  // height: 100vh;
-
-  -webkit-clip-path: polygon(0 25%, 100% 8%, 100% 100%, 0% 100%);
-  clip-path: polygon(0 25%, 100% 8%, 100% 100%, 0% 100%);
-
-
+.section-as-background{
   background-image: url('assets/img/backgrounds/backgroundPic01.png');
-  // background-color: #cccccc; /* Used if the image is unavailable */
-  //  height: 500px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 12rem 0rem 12rem 5rem;
-  position: relative;
-  top: -11rem;
-
 }
 strong{
   color: #EC1C24;
@@ -60,13 +16,21 @@ strong{
   letter-spacing: -2px;
   font-size: 6vw;
 }
-.section-as-bottom-title{
+.section-as-wrap-title{
+  display: flex;
+  height: 50%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.section-as-title{
   color:#ffffff;
   width: 60%;
   text-align: left;
   z-index: 40;
   font-weight: 500;
   letter-spacing: 1px;
-  margin-top: 20%;
   font-size: 4vw;
+  padding: 10rem 0rem 5rem 3rem;
 }

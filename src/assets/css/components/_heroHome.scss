@@ -121,8 +121,8 @@
   justify-content: center;
   align-items: center;
   display: relative;
-  width: 400px;
-  height: 100%;
+  width: 500px;
+  // height: 100%;
   margin: 0;
 }
 .img-item-a{
@@ -184,13 +184,19 @@
 .carousel-control-prev{
   width: 5%;
 }
+.carousel-control-next-icon{
+  background-image: url('assets/img/icons/arrowRightIcon.png');
+}
+.carousel-control-prev-icon{
+  background-image: url('assets/img/icons/arrowLeftIcon.png');
+}
 .prev-arrow{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   // border-radius: 100%;
-  background-color: rgb(219, 219, 219);
+  // background-color: rgb(219, 219, 219);
   display: flex;
   flex-direction: row;
   justify-content: center;

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div clas="home">
     <Header/>
     <HeroHome/>
     <SectionAs/>

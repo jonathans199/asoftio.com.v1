@@ -4,7 +4,7 @@
       <div class="section-why-text-item" v-for="(content,index) in contentWhy" :key="content.id">
           <hr v-if="index == 0" class="hr-vertical-sec-why" >
           <h1 class="why-text-item-h1">{{content.title}}</h1>
-          <span class="why-text-item-span" v-if="index == 0">{{content.title}}</span>
+          <!-- <span class="why-text-item-span" v-if="index == 0">{{content.title}}</span> -->
           <hr v-if="index == 0" class="hr-vertical-sec-why" >
           <hr v-if="index == 1 || index == 2" class="hr-horizontal-sec-why">
           <p class="why-text-item-p">{{content.p}}</p>
