@@ -25,7 +25,7 @@
       <!-- <a href="javascript:void(0)" class="closebtn" @click="closeNav">X</a> -->
       <!-- <a href="#" v-for="menuItem in menuItemsEn" :key="menuItem.id" @click="goToByScroll(menuItem.aTag)">{{menuItem.item}}</a> -->
        <ul class="section-header-menu-items">
-         <li  class="footer-menu-item" ><a href="javascript:void(0)" class="closebtn menu-item-link" @click="closeNav">X</a></li>
+         <li  class="footer-menu-item"><a href="javascript:void(0)" class="closebtn menu-item-link" @click="closeNav">X</a></li>
         <li  class="footer-menu-item" v-for="menuItem in menuItemsEn" :key="menuItem.id" @click="goToByScroll(menuItem.aTag); closeNav()"><a class="menu-item-link" >{{menuItem.item}}</a></li>
       </ul>
     </div>
@@ -40,10 +40,10 @@ import $ from 'jquery'
      menuItemsEn:[
         {item:"ABOUT",aTag:"section-team"},
         {item:"SERVICES",aTag:"section-as"},
-        {item:"PORTFOLIO",aTag:"section-as"},
-        {item:"TESTIMONIALS",aTag:"section-testimonials"},
-        {item:"BLOG",aTag:"section-as"},
-        {item:"CHAT",aTag:"section-as"},
+        // {item:"PORTFOLIO",aTag:"section-as"},
+        // {item:"TESTIMONIALS",aTag:"section-testimonials"},
+        // {item:"BLOG",aTag:"section-as"},
+        // {item:"CHAT",aTag:"section-as"},
         {item:"CONTACT",aTag:"section-contact"}],
     }
   },
@@ -51,7 +51,7 @@ import $ from 'jquery'
       openNav() {
         // console.log('ddd')
         // alert('infewefwefw');
-        document.getElementById("mySidenav").style.width = "300px";
+        document.getElementById("mySidenav").style.width = "50%";
         var ele = document.getElementsByClassName('menu-burger-items');
         ele[0].style.opacity = '0';
       },

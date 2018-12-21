@@ -8,11 +8,11 @@
         <span class="footer-logo-text-bottom">software</span>
       </div> -->
     </div>
-    <div class="section-footer-menu">
+    <!-- <div class="section-footer-menu">
       <ul class="section-footer-menu-items">
         <li  class="footer-menu-item" v-for="menuItem in menuItemsEn" :key="menuItem.id" @click="goToByScroll(menuItem.aTag)"><a class="menu-item-link" >{{menuItem.item}}</a></li>
       </ul>
-    </div>
+    </div> -->
     <div @click="goToByScroll('hero-home')" id="to-top-btn">
         <img class="to-top-img" src="@/assets/img/asoftioLogo.png">
         <button  id="myBtn" title="Go to top">Top</button>
