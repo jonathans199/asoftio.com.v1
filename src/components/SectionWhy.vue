@@ -5,10 +5,6 @@
       <!-- <div class="section-why-text-item" v-for="(content,index) in contentWhy" :key="content.id">
           <hr v-if="index == 0" class="hr-vertical-sec-why" >
           <h1 class="why-text-item-h1">{{content.title}}</h1>
-<<<<<<< HEAD
-          <!-- <span class="why-text-item-span" v-if="index == 0">{{content.title}}</span> -->
-=======
->>>>>>> ee8938a91d246f4edb0c5ef2b85a2118654188f0
           <hr v-if="index == 0" class="hr-vertical-sec-why" >
           <hr v-if="index == 1 || index == 2" class="hr-horizontal-sec-why">
           <p class="why-text-item-p">{{content.p}}</p>

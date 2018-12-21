@@ -5,7 +5,7 @@
     <SectionAs/>
     <SectionWhy/>
     <SectionTeam/>
-    <!-- <SectionTestimonials/> -->
+    <SectionTestimonials/>
     <SectionClients/>
     <SectionContact/>
     <ModalContact/>
